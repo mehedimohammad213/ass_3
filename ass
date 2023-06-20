@@ -1,0 +1,307 @@
+1.
+const birthday = new Date('August 19, 2000');
+const day1 = birthday.getDay();
+// Sunday - Saturday : 0 - 6
+
+console.log(day1);
+
+
+
+
+
+2.
+const arr = [45, 2, 13, 5, 14, 1, 20];
+const squareAndRootSum = (arr = []) => {
+
+    const res = arr.map(el => {
+
+        if(el % 2 === 0){
+            return el * el;
+        }else{
+            return Math.sqrt(el);
+        };
+    });
+    const sum = res.reduce((acc, val) => acc + val);
+    return sum;
+};
+console.log(squareAndRootSum(arr));
+
+
+
+
+
+
+3.
+function test_prime(n)
+{
+
+  if (n===1)
+  {
+    return false;
+  }
+  else if(n === 2)
+  {
+    return true;
+  }else
+  {
+    for(var x = 2; x < n; x++)
+    {
+      if(n % x === 0)
+      {
+        return false;
+      }
+    }
+    return true;  
+  }
+}
+
+console.log(test_prime(37));
+
+
+
+
+
+
+4.
+
+function myFunction() {
+  window.open("https://www.example.com", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=800,height=600");
+}
+
+
+
+
+
+
+5.
+document.getElementById("demo").innerHTML =
+navigator.userAgent;
+
+
+
+
+
+
+
+6.
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+
+
+
+
+
+
+
+
+
+7.
+a.  
+document.onclick = myClickHandler;
+
+
+function myClickHandler() {
+  alert("All orders require minimum two weeks notice due to the nature of event and   wedding products");
+}
+
+
+b. 
+function doCheck() {
+        var keyCode = (event.which) ? event.which : event.keyCode;
+        if ((keyCode == 8) || (keyCode == 46) || (keyCode == 32))
+            alert('The column is readonly and is non-editable');
+        event.returnValue = false;
+    } 
+
+
+
+c.
+let deomImage = document.getElementById("demo");
+      deomImage.addEventListener( "mouseover", function () {
+         document.demo.style = "height:200px; width:200px";
+
+
+
+
+
+
+
+8.
+
+var btn = document.getElementById("mybtn");
+btn.value = 'my value'; // will just add a hidden value
+btn.innerHTML = 'my text';
+
+
+
+
+
+
+9.
+<form action="example/submit.html">
+  Name: <input type="text" name="name"><br>
+  Email: <input type="text" name="email"><br>
+  Password: <input type="password" name="password"><br>
+  Confirm_Password: <input type="password" name="confirmpassword"><br>
+  <button type="submit">Log in</button>
+</form>
+<script>
+  var form = document.querySelector("form");
+  console.log(form.elements[1].type);
+ 
+  console.log(form.elements.password.type);
+
+  console.log(form.elements.name.form == form);
+ 
+</script>
+
+
+
+
+
+
+
+
+10.
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+highlight.
+</div>
+
+<script>
+function myFunction() {
+   var element = document.getElementById("myDIV");
+   element.classList.add("mystyle");
+}
+</script>
+
+
+
+
+
+
+
+11.
+<ul id="userprofile">
+    </ul>
+    
+    <script>
+        function createMenuItem(name) {
+            let li = document.createElement('li');
+            li.textContent = name;
+            return li;
+        }
+        
+        const userprofile = document.querySelector('#userprofile');
+       
+        userprofile.appendChild(createMenuItem('Profile'));
+        userprofile.appendChild(createMenuItem('Settings'));
+        userprofile.appendChild(createMenuItem('Log out'));
+
+
+
+
+
+
+
+12.
+<button type="button" id="mybtn">Click here</button>
+       <script>
+              var btn = document.getElementById("myBtn"); 
+              btn.setAttribute("class", "click-btn"); 
+              btn.setAttribute("enable", " "); 
+       </script>
+
+
+
+
+
+
+
+
+
+
+13.
+<p class="my-paragraph" > Welcome to freeCodeCamp! </p>
+<p id="my-paragraph" > Welcome to freeCodeCamp! </p>
+
+// CSS
+.my-paragraph {
+   color: skyblue;
+}
+
+#my-paragraph {
+   color: skyblue;
+}
+
+
+
+
+
+
+
+14
+<script src="https://api.example.com/data"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.get("demo_test.asp", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>click</button>
+
+
+
+
+
+
+
+
+
+
+
+15.
+<script src="https://api.example.com/submit"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("demo_test_post.asp",
+    {
+      name: "john",
+      email: "john@gmail.com"
+    },
+    function(data,status){
+      alert("Data: " + data + "\nStatus: " + email);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>click</button>
+
+</body>
+
+
+
+
+
